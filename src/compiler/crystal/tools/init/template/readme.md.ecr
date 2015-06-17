@@ -1,4 +1,22 @@
 # <%= config.name %>
+=========
+<% if config.skeleton_type == "app" %>
+
+TODO: Write a description here for application
+
+## Installation
+
+run `crystal deps` (like `bundle install` in Ruby)
+
+## Run application
+
+`crystal run src/<%= config.name %>.cr`
+
+## Build application for production
+
+`crystal build src/<%= config.name %>.cr --release`
+
+<% else %>
 
 TODO: Write a description here for library
 
@@ -23,6 +41,8 @@ TODO: Write usage here for library
 ## Development
 
 TODO: Write instructions for development
+
+<% end %>
 
 ## Contributing
 

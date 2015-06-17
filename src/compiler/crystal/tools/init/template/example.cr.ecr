@@ -1,5 +1,8 @@
 require "./<%= config.name %>/*"
-
+<% if config.skeleton_type == "app" %>
+# TODO Put your code here
+<% else %>
 module <%= module_name %>
   # TODO Put your code here
 end
+<% end %>

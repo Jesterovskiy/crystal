@@ -103,7 +103,7 @@ DIR  - directory where project will be generated,
       end
 
       def log_message
-        "      #{"create".colorize(:light_green)}  #{full_path}" 
+        "      #{"create".colorize(:light_green)}  #{full_path}"
       end
 
       def module_name
