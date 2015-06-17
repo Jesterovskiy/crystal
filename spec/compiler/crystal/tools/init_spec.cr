@@ -28,7 +28,7 @@ module Crystal
     describe_file "example-lib/src/example-lib.cr" do |file|
       file.should contain("Example::Lib")
     end
-    
+
     describe_file "example/.gitignore" do |gitignore|
       gitignore.should contain("/.deps/")
       gitignore.should contain("/.deps.lock")
@@ -62,7 +62,7 @@ end
     end
 
     describe_file "example/Projectfile" do |projectfile|
-      projectfile.should eq(%{deps do\nend\n})
+      projectfile.should eq(%{deps do\n  # Add libs from github: github \"<github-name>/<repositoty-name>\"\nend\n})
     end
 
     describe_file "example/.travis.yml" do |travis|
@@ -88,6 +88,7 @@ end
 module Example
   # TODO Put your code here
 end
+
 })
     end
 
